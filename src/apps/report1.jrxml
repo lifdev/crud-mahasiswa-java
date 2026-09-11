@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60dc95f6-c299-44ce-ba48-311222027a1e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tb_mahasiswa]]>
+	</queryString>
+	<field name="nim" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prodi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="nim_1" class="java.lang.Long" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{nim}]]></variableExpression>
+	</variable>
+	<group name="nim">
+		<groupExpression><![CDATA[$F{nim}]]></groupExpression>
+	</group>
+	<group name="nama">
+		<groupExpression><![CDATA[$F{nama}]]></groupExpression>
+	</group>
+	<group name="jk">
+		<groupExpression><![CDATA[$F{jk}]]></groupExpression>
+	</group>
+	<group name="prodi">
+		<groupExpression><![CDATA[$F{prodi}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="136" y="31" width="296" height="20" uuid="2bb333a4-3c28-4745-b024-49e5c553f61f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA MAHASISWA FAKULTAS ILMU KOMPUTER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="83" height="20" uuid="d1267b03-7f68-4d94-b9d6-ce2855fc1095"/>
+				<text><![CDATA[nim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="0" width="100" height="20" uuid="073a34a6-ec2e-44be-a546-6665b6a2c65f"/>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="208" y="0" width="70" height="20" uuid="ee7734f1-ad18-4d93-a570-559a9ea49cde"/>
+				<text><![CDATA[jk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="100" height="20" uuid="dcfe84d0-8fa3-49c7-91c1-c0f24ab6268d"/>
+				<text><![CDATA[prodi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="0" width="66" height="20" uuid="504b71b7-6db0-432e-838f-54836953326c"/>
+				<text><![CDATA[no_hp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="0" width="67" height="20" uuid="91f07a46-f690-433e-9fa1-f47ea8ebb2fa"/>
+				<text><![CDATA[alamat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="83" height="20" uuid="66a2117d-e381-4afc-8fdc-4e5af7debc17"/>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="0" width="100" height="20" uuid="0d91b1a3-aa1c-4c27-8de5-fdbaee6c28d3"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="0" width="70" height="20" uuid="1577a6d0-0d43-481d-853e-c3516375dbf5"/>
+				<textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="100" height="20" uuid="8534da74-45e4-42c9-afca-11d2e9a0c83d"/>
+				<textFieldExpression><![CDATA[$F{prodi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="66" height="20" uuid="2c87a599-ea09-450a-acbb-6349181f6f1d"/>
+				<textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="0" width="67" height="20" uuid="0ffe580f-ea64-4cc5-88a1-8773bf84543d"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
